@@ -1,0 +1,60 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <string name="app_name">ULL HPCG Benchmarks</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Benchmarks</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+
+    <!--  Side panel benchmarks names -->
+    <string name="ull_ms">ULL Matrix sequential multiplication</string>
+    <string name="nas_title">NAS Benchmarks</string>
+
+    <!--  ULL Matrix sequential multiplication field names -->
+    <string name="matrix_size_text">Matrix size (AxA):</string>
+    <string name="matrix_module">Matrix module:</string>
+    <string name="matrix_print">Print matrixes:</string>
+    <string name="matrix_size_hint">Integer number</string>
+    <string name="matrix_module_hint">Integer number</string>
+
+    <!--  NAS IS (Integer Sort) field names -->
+    <string name="nas_benchmark">Benchmark:</string>
+    <string name="nas_is_threads_text">Nº of threads:</string>
+    <string name="nas_is_class_text">Problem size:</string>
+
+    <!--  Common field names -->
+    <string name="http_endpoint">HTTP endpoint:</string>
+    <string name="http_endpoint_hint">http://192.168.2.65:5000/message</string>
+    <string name="button_compute">Compute</string>
+    <string name="matrix_timing">Time needed for computation</string>
+    <string name="working">Working&#8230;</string>
+    <string name="done">Done.</string>
+
+    <!-- NAS Class options -->
+    <string-array name="nas_class_options">
+        <item>S</item>
+        <item>W</item>
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+    </string-array>
+
+    <!-- NAS Benchmarks options -->
+    <string-array name="nas_benchmarks_options">
+        <item android:id="@+id/is">IS (Integer Sort)</item>
+        <item android:id="@+id/cg">CG (Conjugate Gradient)</item>
+        <item android:id="@+id/mg">MG (Multi-Grid on a sequence of meshes)</item>
+        <item android:id="@+id/ft">FT (discrete 3D fast Fourier Transform)</item>
+        <item android:id="@+id/bt">BT (Block Tri-diagonal solver)</item>
+        <item android:id="@+id/sp">SP (Scalar Penta-diagonal solver)</item>
+        <item android:id="@+id/lu">LU (Lower-Upper Gauss-Seidel solver)</item>
+    </string-array>
+
+</resources>
