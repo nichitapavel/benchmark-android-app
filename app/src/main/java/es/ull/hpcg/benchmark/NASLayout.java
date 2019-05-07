@@ -102,6 +102,8 @@ public class NASLayout extends Fragment {
             case "FT (discrete 3D fast Fourier Transform)":
                 break;
             case "BT (Block Tri-diagonal solver)":
+                NASBTAsyncTask taskBT = new NASBTAsyncTask(getActivity());
+                taskBT.execute(classText, threadText, httpEndpoint);
                 break;
             case "SP (Scalar Penta-diagonal solver)":
                 break;
