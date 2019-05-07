@@ -31,14 +31,6 @@ public class NASISAsyncTask extends AsyncTask<String, Void, List<String>> {
             serial = true;
         }
 
-
-        try {
-            Thread.sleep(10000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
-
         IS is = null;
 
         try{
@@ -53,13 +45,6 @@ public class NASISAsyncTask extends AsyncTask<String, Void, List<String>> {
                 values[2],
                 new HostInfo().getName()
         ));
-
-
-        try {
-            Thread.sleep(10000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
 
         return listOfStrings;
     }

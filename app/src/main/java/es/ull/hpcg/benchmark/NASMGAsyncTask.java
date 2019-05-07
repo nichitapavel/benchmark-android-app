@@ -31,12 +31,6 @@ public class NASMGAsyncTask extends AsyncTask<String, Void, List<String>> {
             serial = true;
         }
 
-        try {
-            Thread.sleep(10000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
         MG mg = null;
 
         try{
@@ -55,13 +49,6 @@ public class NASMGAsyncTask extends AsyncTask<String, Void, List<String>> {
         } catch (RuntimeException e){
             // MG large heap exception
             listOfStrings.add("Current heap space not enough!");
-        }
-
-
-        try {
-            Thread.sleep(10000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
         }
 
         return listOfStrings;
