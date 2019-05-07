@@ -22,7 +22,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'es.ull.hpcg:matrix-lib:0.5.2'
     //implementation files('D:/Downloads/matrix-lib-0.5.2.jar')
-    implementation 'gov.nasa.nas:npb3:0.1-beta-08'
+    implementation 'gov.nasa.nas:npb3:0.1-beta-09'
     implementation 'androidx.appcompat:appcompat:1.0.2'
     implementation 'com.google.android.material:material:1.0.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
