@@ -207,12 +207,12 @@ fabric.properties
 *.dex
 
 # Java class files
-*.class
+# *.class  # declared in JAVA section
 
 # Generated files
 bin/
 gen/
-out/
+# out/  # declared in JETBRAINS section
 
 # Gradle files
 .gradle/
@@ -225,7 +225,7 @@ local.properties
 proguard/
 
 # Log Files
-*.log
+# *.log  # declared in JAVA section
 
 # Android Studio Navigation editor temp files
 .navigation/
@@ -243,7 +243,7 @@ captures/
 .idea/libraries
 .idea/caches
 # Android Studio 3 in .gitignore file.
-.idea/caches/build_file_checksums.ser
+# .idea/caches/build_file_checksums.ser  # declared in JETBRAINS section
 .idea/modules.xml
 
 # Keystore files

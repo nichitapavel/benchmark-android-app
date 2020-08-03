@@ -1,22 +1,31 @@
 apply plugin: 'com.android.application'
 
 android {
-    signingConfigs {
-        release {
-            storeFile file(RELEASE_STORE_FILE)
-            storePassword RELEASE_STORE_PASSWORD
-            keyAlias RELEASE_KEY_ALIAS
-            keyPassword RELEASE_KEY_PASSWORD
-        }
-    }
     compileSdkVersion 28
     defaultConfig {
         applicationId "es.ull.hpcg.benchmark"
-        minSdkVersion 19
+        minSdkVersion 24
         targetSdkVersion 28
         versionCode 3
         versionName "1.0-beta-02"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    signingConfigs {
+        release {
+            /*
+             These settings are declared in gradle.gradleUserHomeDir directory
+             (usually /home/<user>/.gradle/ or equivalent for different OS) in
+             gradle.properties file.
+             Partially inspired by
+             https://stablekernel.com/article/creating-keystores-and-signing-android-apps/ ,
+             https://developer.android.com/studio/publish/app-signing.html#secure_key and
+             https://discuss.gradle.org/t/gradle-gradle-properties-file-not-being-read/7574
+             */
+            storeFile file(project.property('benchmarkAndroidApp.storeFile'))
+            storePassword project.property('benchmarkAndroidApp.storePassword')
+            keyAlias project.property('benchmarkAndroidApp.keyAlias')
+            keyPassword project.property('benchmarkAndroidApp.keyPassword')
+        }
     }
     buildTypes {
         release {
@@ -33,13 +42,15 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'es.ull.hpcg:matrix-lib:0.5.2'
+    implementation 'es.ull.hpcg:matrix-lib:0.3.0-beta-01'
     //implementation files('D:/Downloads/matrix-lib-0.5.2.jar')
     implementation 'gov.nasa.nas:npb3:0.1.1'
-    implementation 'androidx.appcompat:appcompat:1.0.2'
-    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'com.google.android.material:material:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    testImplementation 'junit:junit:4.12'
+    implementation 'es.ull.pcg.hpc:javabenchmark:1.0'
+    implementation 'androidx.mediarouter:mediarouter:1.1.0'
+    testImplementation 'junit:junit:4.13'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 }
