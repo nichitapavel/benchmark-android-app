@@ -11,6 +11,9 @@
         <item
             android:id="@+id/nas"
             android:title="@string/nas_title" />
+        <item
+            android:id="@+id/rancid"
+            android:title="@string/rancid" />
 
     </group>
 

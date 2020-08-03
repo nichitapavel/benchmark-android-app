@@ -20,7 +20,7 @@
     <!--  ULL Matrix sequential multiplication field names -->
     <string name="matrix_size_text">Matrix size (AxA):</string>
     <string name="matrix_module">Matrix module:</string>
-    <string name="matrix_print">Print matrixes:</string>
+    <string name="matrix_print">Print matrices:</string>
     <string name="matrix_size_hint">Integer number</string>
     <string name="matrix_module_hint">Integer number</string>
 
@@ -36,6 +36,8 @@
     <string name="matrix_timing">Time needed for computation</string>
     <string name="working">Working&#8230;</string>
     <string name="done">Done.</string>
+    <string name="rancid">Rancid</string>
+    <string name="rancid_results">Some results will show up here</string>
 
     <!-- NAS Class options -->
     <string-array name="nas_class_options">

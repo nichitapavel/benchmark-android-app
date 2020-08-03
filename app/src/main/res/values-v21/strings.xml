@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="rancid">Rancid</string>
+    <string name="rancid_results">Some results will show up here</string>
+</resources>

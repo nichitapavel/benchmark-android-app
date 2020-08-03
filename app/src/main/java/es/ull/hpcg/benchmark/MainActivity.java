@@ -80,6 +80,12 @@ public class MainActivity extends AppCompatActivity
                         new NASLayout()
                 ).commit();
                 break;
+            case R.id.rancid:
+                getSupportFragmentManager().beginTransaction().replace(
+                        R.id.content_main,
+                        new RancidLayout()
+                ).commit();
+                break;
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
