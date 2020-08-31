@@ -21,10 +21,10 @@ android {
              https://developer.android.com/studio/publish/app-signing.html#secure_key and
              https://discuss.gradle.org/t/gradle-gradle-properties-file-not-being-read/7574
              */
-            storeFile file(project.property('benchmarkAndroidApp.storeFile'))
-            storePassword project.property('benchmarkAndroidApp.storePassword')
-            keyAlias project.property('benchmarkAndroidApp.keyAlias')
-            keyPassword project.property('benchmarkAndroidApp.keyPassword')
+            storeFile = file(project.property('benchmarkAndroidApp.storeFile'))
+            storePassword = project.property('benchmarkAndroidApp.storePassword')
+            keyAlias = project.property('benchmarkAndroidApp.keyAlias')
+            keyPassword = project.property('benchmarkAndroidApp.keyPassword')
         }
     }
     buildTypes {
@@ -42,7 +42,7 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'es.ull.hpcg:matrix-lib:0.3.0-beta-01'
+    implementation 'es.ull.hpcg:matrix-lib:0.5.3-beta-05'
     //implementation files('D:/Downloads/matrix-lib-0.5.2.jar')
     implementation 'gov.nasa.nas:npb3:0.1.1'
     implementation 'androidx.appcompat:appcompat:1.1.0'
