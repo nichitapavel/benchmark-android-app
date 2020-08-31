@@ -8,7 +8,7 @@ import es.ull.pcg.hpc.benchmark.benchmark.BenchmarkImplementation;
 import npb3.BT;
 
 public class RancidPrototype extends BenchmarkImplementation {
-    protected BT bt = new BT('W', 1, true);
+    protected BT bt = new BT('S', 1, true);
 
     public RancidPrototype (String title) {
         super(title);
@@ -26,6 +26,5 @@ public class RancidPrototype extends BenchmarkImplementation {
                 "http://localhost",
                 new HostInfo().getName()
         ));
-
     }
 }
