@@ -14,11 +14,36 @@ buildscript {
     }
 }
 
+
+ext.GitHubPackagesClosure = {
+    name = 'GitHubPackages'
+    url = uri('https://maven.pkg.github.com/HPC-ULL/SBCs-EnergyEfficiency')
+    credentials {
+        /*
+        Properties 'gpr.user' and 'gpr.key' are declared in gradle.gradleUserHomeDir
+        directory (usually /home/<user>/.gradle/ or equivalent for different OS) in
+        gradle.properties file.
+        Partially inspired by
+        https://stablekernel.com/article/creating-keystores-and-signing-android-apps/ ,
+        https://developer.android.com/studio/publish/app-signing.html#secure_key and
+        https://discuss.gradle.org/t/gradle-gradle-properties-file-not-being-read/7574
+        */
+        username = project.property('gpr.user')
+        password = project.property('gpr.key')
+    }
+}
+
+// helper function to return a "curried" closure
+Closure GitHubPackages() {
+    return GitHubPackagesClosure.curry()
+}
+
 allprojects {
     repositories {
         google()
         jcenter()
         mavenLocal()
+        maven GitHubPackages()
     }
 }
 
